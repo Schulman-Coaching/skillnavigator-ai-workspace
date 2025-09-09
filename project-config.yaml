@@ -36,6 +36,6 @@ workspace:
   backup_frequency: "daily"
   
 integrations:
-  notion_workspace_id: "your-notion-workspace-id"
+  notion_workspace_id: "268445a83d0e81d0895decd6ceed7af5"
   github_repo: "your-github-repo"
   slack_channel: "#skillnavigator-ai"

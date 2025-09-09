@@ -1,0 +1,134 @@
+{
+  "template_name": "SkillNavigator Daily Standup",
+  "database_schema": {
+    "properties": {
+      "Date": {
+        "type": "date",
+        "date": {}
+      },
+      "Status": {
+        "type": "select",
+        "select": {
+          "options": [
+            {"name": "Planned", "color": "blue"},
+            {"name": "In Progress", "color": "yellow"},
+            {"name": "Completed", "color": "green"},
+            {"name": "Blocked", "color": "red"}
+          ]
+        }
+      },
+      "Human Focus Time": {
+        "type": "number",
+        "number": {"format": "number"}
+      },
+      "AI Tasks Assigned": {
+        "type": "number",
+        "number": {"format": "number"}
+      },
+      "Key Decisions": {
+        "type": "rich_text",
+        "rich_text": {}
+      },
+      "Tomorrow's Priorities": {
+        "type": "rich_text", 
+        "rich_text": {}
+      },
+      "Blockers": {
+        "type": "rich_text",
+        "rich_text": {}
+      }
+    }
+  },
+  "page_template": {
+    "children": [
+      {
+        "object": "block",
+        "type": "heading_1",
+        "heading_1": {
+          "rich_text": [{"text": {"content": "Daily AI-Accelerated Standup"}}]
+        }
+      },
+      {
+        "object": "block",
+        "type": "divider",
+        "divider": {}
+      },
+      {
+        "object": "block",
+        "type": "heading_2", 
+        "heading_2": {
+          "rich_text": [{"text": {"content": "Human Focus Today (30 mins strategic review)"}}]
+        }
+      },
+      {
+        "object": "block",
+        "type": "heading_3",
+        "heading_3": {
+          "rich_text": [{"text": {"content": "Yesterday's Achievements"}}]
+        }
+      },
+      {
+        "object": "block",
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [{"text": {"content": ""}}]
+        }
+      },
+      {
+        "object": "block",
+        "type": "heading_3",
+        "heading_3": {
+          "rich_text": [{"text": {"content": "Today's Strategic Priorities"}}]
+        }
+      },
+      {
+        "object": "block",
+        "type": "bulleted_list_item",
+        "bulleted_list_item": {
+          "rich_text": [{"text": {"content": ""}}]
+        }
+      },
+      {
+        "object": "block",
+        "type": "heading_2",
+        "heading_2": {
+          "rich_text": [{"text": {"content": "AI Agent Task Assignments"}}]
+        }
+      },
+      {
+        "object": "block",
+        "type": "toggle",
+        "toggle": {
+          "rich_text": [{"text": {"content": "Code Architect Tasks"}}],
+          "children": [
+            {
+              "object": "block",
+              "type": "to_do",
+              "to_do": {
+                "rich_text": [{"text": {"content": ""}}],
+                "checked": false
+              }
+            }
+          ]
+        }
+      },
+      {
+        "object": "block", 
+        "type": "toggle",
+        "toggle": {
+          "rich_text": [{"text": {"content": "Research Analyst Tasks"}}],
+          "children": [
+            {
+              "object": "block",
+              "type": "to_do", 
+              "to_do": {
+                "rich_text": [{"text": {"content": ""}}],
+                "checked": false
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

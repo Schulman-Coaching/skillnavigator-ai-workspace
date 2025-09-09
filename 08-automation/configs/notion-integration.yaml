@@ -1,0 +1,33 @@
+# Notion Integration Configuration for SkillNavigator
+
+notion:
+  workspace_id: "268445a83d0e81d0895decd6ceed7af5"  # Your SkillNavigator workspace ID
+  api_token: "${NOTION_TOKEN}"  # Set in .env file
+  
+  # Database IDs (automatically created)
+  databases:
+    daily_standups: "4880ac73-8a85-4d30-8b9b-71936ab6dd62"
+    weekly_reviews: "3f72b418-500d-425c-85f4-309afe9f46dd" 
+    ai_outputs: "3fdd6c0d-febb-4103-bd29-c2ba11ea818c"
+    project_tasks: "1ec0066a-3f72-4a65-a611-9c7497e9cb81"
+
+  # Auto-sync settings
+  sync_settings:
+    auto_create_pages: true
+    update_frequency: "hourly"
+    sync_ai_outputs: true
+    backup_before_update: true
+
+  # Page templates mapping
+  templates:
+    daily_standup: "./notion-templates/daily-standup.json"
+    weekly_review: "./notion-templates/weekly-review.json"
+    ai_output: "./notion-templates/ai-output.json"
+    research_report: "./notion-templates/research-report.json"
+
+  # Automation triggers
+  triggers:
+    on_ai_output_complete: "create_notion_page"
+    on_daily_standup: "update_progress_database"
+    on_weekly_review: "generate_summary_page"
+    on_research_complete: "add_to_insights_database"
