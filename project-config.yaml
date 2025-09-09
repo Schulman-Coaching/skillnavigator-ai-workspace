@@ -37,5 +37,5 @@ workspace:
   
 integrations:
   notion_workspace_id: "268445a83d0e81d0895decd6ceed7af5"
-  github_repo: "your-github-repo"
+  github_repo: "https://github.com/Schulman-Coaching/skillnavigator-ai-workspace.git"
   slack_channel: "#skillnavigator-ai"
