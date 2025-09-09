@@ -96,27 +96,6 @@ class NotionSync {
         properties: {
           'Name': {
             title: [{ text: { content: `${agentType} - ${new Date().toISOString().split('T')[0]}` } }]
-          },
-          'Agent Type': {
-            select: { name: agentType }
-          },
-          'Created': {
-            date: { start: new Date().toISOString() }
-          },
-          'Status': {
-            select: { name: 'Generated' }
-          },
-          'Quality Score': {
-            number: metadata.qualityScore || null
-          },
-          'Review Required': {
-            checkbox: metadata.reviewRequired || true
-          },
-          'Implementation Time': {
-            number: metadata.implementationTime || null
-          },
-          'Tags': {
-            multi_select: metadata.tags ? metadata.tags.map(tag => ({ name: tag })) : []
           }
         },
         children: [
